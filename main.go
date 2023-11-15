@@ -336,6 +336,7 @@ func IntroCmd(_ *cli.Context) error {
 		return err
 	}
 	clientlog.Output()
+	setupcore.PlayAnimation()
 	clientlog.Output(coreutils.PrintTitle(fmt.Sprintf("Thank you for installing version %s of JFrog CLI! 🐸", cliutils.CliVersion)))
 	var serverExists bool
 	serverExists, err = coreconfig.IsServerConfExists()
